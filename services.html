@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | All Star Dryer Vent Specialists</title>
-    <meta name="description" content="Explore our premium dryer vent cleaning, repair, and installation services. Faster drying times and fire safety for Reno & Sparks homes.">
+    <title>Expert Dryer Vent Services | All Star Dryer Vent Reno-Sparks</title>
+    <meta name="description" content="Professional dryer vent cleaning, repair, and code-compliant installations in Reno and Sparks, NV. Protect your home and maximize dryer efficiency.">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .glass-header {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(var(--brz-global-color2), 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .service-card:hover img {
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-slate-50 text-slate-900 font-sans">
 
-    <!-- NAVIGATION - IDENTICAL ACROSS ALL FILES -->
+    <!-- NAVIGATION - SHARED -->
     <nav class="glass-header sticky top-0 z-50 py-4 px-6 md:px-12 flex justify-between items-center">
         <div class="flex items-center gap-4">
-            <img src="https://www.allstardryervent.com/wp-content/uploads/2023/03/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-logo2.png" alt="All Star Dryer Vent Logo" class="h-16 w-auto" title="Dryer Vent Cleaning Reno">
+            <img src="https://www.allstardryervent.com/wp-content/uploads/2023/03/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-logo2.png" alt="All Star Dryer Vent Logo" class="h-16 w-auto">
             <a href="tel:7752244136" class="hidden md:block bg-blue-900 text-white px-4 py-2 rounded-full font-bold shadow-lg hover:bg-blue-800 transition">775-224-4136</a>
         </div>
         <ul class="flex gap-6 font-bold text-blue-900 uppercase text-sm tracking-wide">
@@ -30,50 +33,111 @@
         </ul>
     </nav>
 
-    <header class="bg-blue-900 py-16 px-6 text-center text-white">
-        <h1 class="text-4xl font-black uppercase tracking-tighter sm:text-5xl">Expert Dryer Vent Solutions</h1>
-        <p class="mt-4 text-blue-200 max-w-2xl mx-auto text-lg leading-relaxed font-light">
-            We don't just clean vents; we engineer safety and efficiency back into your laundry room. Professional maintenance that saves you $30+ every month.
-        </p>
+    <!-- HEADER PINCH -->
+    <header class="bg-blue-900 py-20 px-6 text-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-33.jpg" class="w-full h-full object-cover" alt="">
+        </div>
+        <div class="relative z-10">
+            <h1 class="text-4xl md:text-6xl font-black uppercase tracking-tighter italic">Professional Solutions</h1>
+            <p class="mt-4 text-blue-200 max-w-3xl mx-auto text-xl font-light">
+                Complete dryer vent safety and performance care. From deep cleaning to complex rerouting—we ensure your home is fire-safe and energy-efficient.
+            </p>
+        </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
-        <!-- Service 1 -->
-        <article class="bg-white rounded-2xl shadow-xl overflow-hidden border-b-8 border-blue-600 hover:scale-105 transition duration-300">
-            <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-47.jpg" alt="Dryer vent cleaning service Reno" class="w-full h-48 object-cover">
-            <div class="p-8">
-                <h2 class="text-2xl font-bold text-blue-900 mb-4">Deep Cleaning</h2>
-                <p class="text-gray-600 leading-relaxed">High-power vacuum extraction of lint and debris that standard filters miss. Prevents fires and slashes dry times.</p>
+    <!-- SERVICES GRID - OPTIMIZED REDUCTION -->
+    <main class="max-w-7xl mx-auto px-6 py-20 space-y-24">
+        
+        <!-- Service 1: Cleaning -->
+        <section id="cleaning" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="service-card overflow-hidden rounded-3xl shadow-2xl order-2 md:order-1">
+                <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-47.jpg" 
+                     alt="Professional dryer vent cleaning Reno Sparks" 
+                     title="Deep Lint Removal Service"
+                     class="w-full h-96 object-cover transition-transform duration-500">
             </div>
-        </article>
+            <div class="space-y-6 order-1 md:order-2">
+                <span class="text-red-600 font-bold tracking-widest uppercase">Preventative Care</span>
+                <h2 class="text-4xl font-extrabold text-blue-900 leading-tight">Deep System Cleaning</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Our high-power vacuum extraction removes the packed lint and debris that standard household filters miss. We clean the entire length of your ductwork from the dryer to the exterior exit, ensuring zero obstructions.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2 font-semibold text-slate-700">✅ Reduces dry times to under 30 minutes</li>
+                    <li class="flex items-center gap-2 font-semibold text-slate-700">✅ Eliminates localized fire hazards</li>
+                    <li class="flex items-center gap-2 font-semibold text-slate-700">✅ Lowers monthly energy consumption</li>
+                </ul>
+            </div>
+        </section>
 
-        <!-- Service 2 -->
-        <article class="bg-white rounded-2xl shadow-xl overflow-hidden border-b-8 border-red-600 hover:scale-105 transition duration-300">
-            <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-15.jpg" alt="Expert dryer vent repair Sparks" class="w-full h-48 object-cover">
-            <div class="p-8">
-                <h2 class="text-2xl font-bold text-blue-900 mb-4">Pro Repairs</h2>
-                <p class="text-gray-600 leading-relaxed">Fixing crushed, disconnected, or leaking ductwork to ensure your dryer exhausts safely outside your home.</p>
+        <!-- Service 2: Repair -->
+        <section id="repairs" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-red-600 font-bold tracking-widest uppercase">Expert Maintenance</span>
+                <h2 class="text-4xl font-extrabold text-blue-900 leading-tight">Precision Duct Repair</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Crushed foil transitions, disconnected joints, and sagging lines aren't just inefficient—they're dangerous. We repair and replace faulty components with code-compliant rigid metal ducting.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2 font-semibold text-slate-700">✅ Fixes disconnected or leaking lines</li>
+                    <li class="flex items-center gap-2 font-semibold text-slate-700">✅ Replaces dangerous plastic flex-ducting</li>
+                    <li class="flex items-center gap-2 font-semibold text-slate-700">✅ Restores full airflow velocity</li>
+                </ul>
             </div>
-        </article>
+            <div class="service-card overflow-hidden rounded-3xl shadow-2xl">
+                <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-15.jpg" 
+                     alt="Dryer vent duct repair Nevada" 
+                     title="Certified Ductwork Repair"
+                     class="w-full h-96 object-cover transition-transform duration-500">
+            </div>
+        </section>
 
-        <!-- Service 3 -->
-        <article class="bg-white rounded-2xl shadow-xl overflow-hidden border-b-8 border-blue-600 hover:scale-105 transition duration-300">
-            <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-32.jpg" alt="New dryer vent installation Nevada" class="w-full h-48 object-cover">
-            <div class="p-8">
-                <h2 class="text-2xl font-bold text-blue-900 mb-4">Installations</h2>
-                <p class="text-gray-600 leading-relaxed">New vents, boosters, and heavy-duty covers. We upgrade your home to meet the latest fire safety codes.</p>
+        <!-- Service 3: Replacement/Install -->
+        <section id="install" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="service-card overflow-hidden rounded-3xl shadow-2xl order-2 md:order-1">
+                <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-32.jpg" 
+                     alt="Dryer vent installation services" 
+                     title="Code-Compliant Vent Installation"
+                     class="w-full h-96 object-cover transition-transform duration-500">
             </div>
-        </article>
+            <div class="space-y-6 order-1 md:order-2">
+                <span class="text-red-600 font-bold tracking-widest uppercase">System Upgrades</span>
+                <h2 class="text-4xl font-extrabold text-blue-900 leading-tight">Code-Compliant Installs</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Need a new exit point or a full system replacement? We specialize in rerouting dryer vents to optimize the shortest path to the outside, installing booster fans for long runs, and fitting pest-proof exterior covers.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2 font-semibold text-slate-700">✅ Installation of heavy-duty exterior covers</li>
+                    <li class="flex items-center gap-2 font-semibold text-slate-700">✅ Booster fan integration for long runs</li>
+                    <li class="flex items-center gap-2 font-semibold text-slate-700">✅ 100% Fire code compliant materials</li>
+                </ul>
+            </div>
+        </section>
+
     </main>
 
-    <section class="max-w-4xl mx-auto py-20 px-6 text-center">
-        <h3 class="text-3xl font-black text-blue-900 mb-8">Ready to get your drying time back?</h3>
-        <button data-token="1a8d0e15a2844e429147c1c8050bde35" data-orgname="All-Star-Dryer-Vent" 
-            class="bg-red-600 text-white rounded-full px-12 py-5 text-2xl font-bold uppercase tracking-widest shadow-2xl hover:bg-red-700 transition" 
-            onClick="HCPWidget.openModal()">
-            Secure My Booking
-        </button>
+    <!-- CALL TO ACTION -->
+    <section class="bg-slate-100 py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <h2 class="text-3xl md:text-4xl font-black text-blue-900 uppercase">Don't wait for a burning smell.</h2>
+            <p class="text-xl text-gray-700">Secure your inspection today and get your laundry drying like new again.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button data-token="1a8d0e15a2844e429147c1c8050bde35" data-orgname="All-Star-Dryer-Vent" 
+                    class="bg-blue-600 text-white rounded-full px-10 py-4 text-xl font-bold uppercase shadow-xl hover:bg-blue-700 transition" 
+                    onClick="HCPWidget.openModal()">
+                    Book Online Now
+                </button>
+                <a href="tel:7752244136" class="bg-red-600 text-white rounded-full px-10 py-4 text-xl font-bold uppercase shadow-xl hover:bg-red-700 transition">
+                    Call 775-224-4136
+                </a>
+            </div>
+        </div>
     </section>
+
+    <footer class="bg-blue-900 py-12 px-6 text-center text-blue-300">
+        <p class="font-bold">&copy; 2026 All Star Dryer Vent. Serving All of Northern Nevada.</p>
+    </footer>
 
     <!-- Housecall Pro Integration Script -->
     <script async src="https://online-booking.housecallpro.com/script.js?token=1a8d0e15a2844e429147c1c8050bde35&orgName=All-Star-Dryer-Vent"></script>
