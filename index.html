@@ -16,16 +16,15 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
         .hero-gradient {
-            background-color: #4a5568;
-            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
-            background-attachment: fixed;
+            background: radial-gradient(circle at top right, rgba(187, 72, 74, 0.05), transparent),
+                        radial-gradient(circle at bottom left, rgba(21, 89, 237, 0.05), transparent);
         }
         .before-after-img {
             transition: all 0.3s ease;
         }
         .before-after-img:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         .service-card:hover img {
             transform: scale(1.05);
@@ -42,9 +41,9 @@
             opacity: 0;
             animation: roll 6s infinite;
         }
-        .rolling-text span:nth-child(1) { color: #f8fafc; }
-        .rolling-text span:nth-child(2) { animation-delay: 2s; color: #60a5fa; }
-        .rolling-text span:nth-child(3) { animation-delay: 4s; color: #f87171; }
+        .rolling-text span:nth-child(1) { color: #0f172a; }
+        .rolling-text span:nth-child(2) { animation-delay: 2s; color: #2563eb; }
+        .rolling-text span:nth-child(3) { animation-delay: 4s; color: #dc2626; }
 
         @keyframes aggressive-bounce {
             0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
@@ -54,22 +53,26 @@
         .animate-bounce-medium {
             animation: aggressive-bounce 2.5s infinite;
         }
+        .lint-bg {
+            background-color: #4a5568;
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+        }
     </style>
 </head>
-<body class="bg-[#334155] text-slate-100 font-sans selection:bg-red-100 selection:text-red-900">
+<body class="bg-slate-50 text-slate-900 font-sans selection:bg-red-100 selection:text-red-900">
 
     <!-- NAVIGATION - SHARED -->
-    <nav class="glass-header sticky top-0 z-[100] py-2 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
-        <div class="flex items-center gap-4 -my-4 relative">
-            <a href="index.html" class="hover:opacity-90 transition">
+    <nav class="glass-header sticky top-0 z-[100] py-2 px-6 md:px-12 flex justify-between items-center transition-all duration-300 border-b border-slate-100">
+        <div class="flex items-center gap-4 -my-4 relative text-slate-900 font-black">
+            <a href="index.html" class="hover:opacity-90 transition pt-2">
                 <img src="https://www.allstardryervent.com/wp-content/uploads/2023/03/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-logo2.png" alt="All Star Dryer Vent Logo" class="h-14 md:h-32 w-auto z-[110] drop-shadow-xl relative hover:scale-105 transition-transform">
             </a>
             <div class="hidden lg:flex flex-col border-l border-slate-200 pl-4">
-                <span class="text-[10px] uppercase font-black tracking-[0.2em] text-red-600 font-black">RENO-SPARKS, NV</span>
+                <span class="text-[10px] uppercase font-black tracking-[0.2em] text-red-600">RENO-SPARKS, NV</span>
                 <a href="tel:7752244136" class="text-xl font-black text-blue-900 hover:text-red-600 transition">775-224-4136</a>
             </div>
         </div>
-        <ul class="flex gap-4 md:gap-8 font-black text-blue-900 uppercase text-[11px] md:text-sm tracking-widest font-black">
+        <ul class="flex gap-4 md:gap-8 font-black text-blue-900 uppercase text-[11px] md:text-sm tracking-widest">
             <li><a href="index.html" class="text-red-600 border-b-2 border-red-600 pb-1">Home</a></li>
             <li><a href="services.html" class="hover:text-red-600 transition">Services</a></li>
             <li><a href="locations.html" class="hover:text-red-600 transition">Locations</a></li>
@@ -80,42 +83,31 @@
     <!-- HERO SECTION -->
     <section class="hero-gradient relative overflow-hidden pt-12 pb-12 md:pt-24 md:pb-24">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start relative z-10">
-            
             <div class="space-y-8">
                 <div class="inline-block bg-white/80 backdrop-blur px-4 py-1 rounded-full border border-blue-100 shadow-sm">
                     <span class="text-blue-600 font-bold text-xs uppercase tracking-widest font-black">🏆 Locally Owned & Operated</span>
                 </div>
-                
                 <div class="space-y-2">
-                    <h1 class="text-5xl md:text-7xl font-black text-white leading-[0.95] tracking-tighter">
+                    <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter">
                         Dryer Vent <br>
                         <div class="rolling-text relative h-[1.1em] overflow-hidden">
                             <span>Cleaning</span>
                             <span>Repairs</span>
                             <span>Installs</span>
                         </div>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-500 block pt-2">Reno-Sparks</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-red-600 block pt-2">Reno-Sparks</span>
                     </h1>
                 </div>
-
-                <p class="text-xl text-slate-200 leading-relaxed max-w-xl">
+                <p class="text-xl text-slate-600 leading-relaxed max-w-xl">
                     Northern Nevada's reliable choice for <strong>professional lint removal</strong> and code compliant vent exhaust maintenance. We eliminate fire hazards and slash energy bills servicing Reno, Sparks, and surrounding communities since 2013.
                 </p>
-
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://book.housecallpro.com/book/All-Star-Dryer-Vent/1a8d0e15a2844e429147c1c8050bde35?v2=true" 
-                        class="bg-blue-600 text-white rounded-2xl px-10 py-5 text-xl font-black uppercase tracking-wider shadow-2xl hover:bg-black transition-all hover:-translate-y-1 active:scale-95 inline-block text-center">
-                        Book Online Now
-                    </a>
-                    <a href="tel:7752244136" class="bg-white text-blue-900 border-2 border-blue-900 rounded-2xl px-10 py-5 text-xl font-black uppercase tracking-wider shadow-xl hover:bg-blue-50 transition-all text-center">
-                        775-224-4136
-                    </a>
+                    <a href="https://book.housecallpro.com/book/All-Star-Dryer-Vent/1a8d0e15a2844e429147c1c8050bde35?v2=true" class="bg-blue-600 text-white rounded-2xl px-10 py-5 text-xl font-black uppercase tracking-wider shadow-2xl hover:bg-black transition-all hover:-translate-y-1 active:scale-95 inline-block text-center">Book Online Now</a>
+                    <a href="tel:7752244136" class="bg-white text-blue-900 border-2 border-blue-900 rounded-2xl px-10 py-5 text-xl font-black uppercase tracking-wider shadow-xl hover:bg-blue-50 transition-all text-center">775-224-4136</a>
                 </div>
             </div>
-
-            <!-- SMART FORM CONVEX CARD -->
             <div class="relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 uppercase font-black"></div>
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
                 <div class="relative bg-white p-10 rounded-[2rem] shadow-2xl border border-slate-100">
                     <div class="mb-8 space-y-2">
                         <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight italic">Service Call Request</h2>
@@ -124,107 +116,91 @@
                     <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
                         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                        <div class="grid grid-cols-2 gap-4">
-                            <input type="text" name="first_name" placeholder="First Name*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
-                            <input type="text" name="last_name" placeholder="Last Name*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
-                        </div>
+                        <input type="text" name="name" placeholder="Full Name*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
                         <input type="tel" name="phone" placeholder="Phone Number*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
                         <input type="email" name="email" placeholder="Email Address*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
                         <input type="text" name="postal_code" placeholder="Service Zip Code*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
-                        
-                        <button type="submit" class="w-full bg-red-600 hover:bg-black text-white font-black text-xl py-5 rounded-2xl shadow-xl uppercase tracking-[0.2em] transition duration-300">
-                            Submit Request
-                        </button>
+                        <button type="submit" class="w-full bg-red-600 hover:bg-black text-white font-black text-xl py-5 rounded-2xl shadow-xl uppercase tracking-[0.2em] transition duration-300">Submit Request</button>
                     </form>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- FULL WIDTH CENTERED IMAGES CONTAINER -->
-    <section class="bg-slate-800 border-y border-slate-700 py-6 md:py-8">
+    <!-- FULL WIDTH LINT-BG CONTAINER FOR IMAGES -->
+    <section class="lint-bg border-y border-slate-700 py-10">
         <div class="max-w-[100vw] overflow-hidden">
             <div class="flex flex-wrap justify-center gap-4 px-4">
-                <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-square w-24 md:w-44 flex-shrink-0">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-44 flex-shrink-0">
                     <img src="https://www.allstardryervent.com/wp-content/uploads/2023/03/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-REPLACEMENT-775-224-4136-RENO-NEVADA-11.jpg" alt="Dryer lint cleaning Reno" class="before-after-img w-full h-full object-cover">
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-square w-24 md:w-44 flex-shrink-0">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-44 flex-shrink-0">
                     <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-47.jpg" alt="Dryer vent line Sparks" class="before-after-img w-full h-full object-cover">
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-square w-24 md:w-44 flex-shrink-0">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-44 flex-shrink-0">
                     <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-32.jpg" alt="Dryer duct repair Nevada" class="before-after-img w-full h-full object-cover">
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-square w-24 md:w-44 flex-shrink-0">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-44 flex-shrink-0">
                     <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-15.jpg" alt="Safety kit" class="before-after-img w-full h-full object-cover">
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-square w-24 md:w-44 flex-shrink-0">
-                    <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-52.jpg" alt="Backpressure test" class="before-after-img w-full h-full object-cover font-black">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-44 flex-shrink-0">
+                    <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-52.jpg" alt="Backpressure test" class="before-after-img w-full h-full object-cover">
                 </div>
-                <div class="rounded-2xl overflow-hidden shadow-lg border-2 border-white aspect-square w-24 md:w-44 flex-shrink-0">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-44 flex-shrink-0">
                     <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-60.jpg" alt="Roof exit cleaning" class="before-after-img w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COMPACT SERVICES SECTION -->
+    <!-- SERVICES SECTION -->
     <section id="services" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
         <div class="text-center mb-16 space-y-2">
-            <h2 class="text-xs font-black uppercase tracking-[0.3em] text-red-600 font-black">Professional Reliable Dryer Vent Services</h2>
-            <p class="text-4xl md:text-5xl font-black text-blue-900 tracking-tighter uppercase font-black">Our Expert Services</p>
+            <h2 class="text-xs font-black uppercase tracking-[0.3em] text-red-600">Professional Reliable Dryer Vent Services</h2>
+            <p class="text-4xl md:text-5xl font-black text-blue-900 tracking-tighter uppercase">Our Expert Services</p>
         </div>
-        
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Cleaning -->
-            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden flex flex-col group text-slate-900 font-black">
-                <div class="overflow-hidden h-48"><img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-47.jpg" alt="Cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden flex flex-col group text-slate-900">
+                <div class="overflow-hidden h-48"><img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-47.jpg" alt="Cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 font-black"></div>
                 <div class="p-6 flex-grow flex flex-col gap-4">
                     <h3 class="text-xl font-black text-blue-900 uppercase italic">Lint Removal</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed font-black">Industrial-grade vacuum extraction to eliminate deep-packed lint and restore safety.</p>
-                    <a href="services.html#cleaning" class="mt-auto inline-block bg-blue-600 text-white text-center py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-black transition">View Details <span class="block text-[9px] font-medium normal-case tracking-normal opacity-80 uppercase font-black">Northern NV Service Areas</span></a>
+                    <p class="text-sm text-slate-600 leading-relaxed">Industrial-grade vacuum extraction to eliminate deep-packed lint and restore safety.</p>
+                    <a href="services.html#cleaning" class="mt-auto inline-block bg-blue-600 text-white text-center py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-black transition">View Details <span class="block text-[9px] font-medium normal-case tracking-normal opacity-80 uppercase">Northern NV Service Areas</span></a>
                 </div>
             </div>
-
-            <!-- Repair -->
-            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden flex flex-col group text-slate-900">
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden flex flex-col group text-slate-900 font-black">
                 <div class="overflow-hidden h-48"><img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-15.jpg" alt="Repair" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="p-6 flex-grow flex flex-col gap-4">
                     <h3 class="text-xl font-black text-blue-900 uppercase italic">Pro Repairs</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed font-black">Replacing crushed transitions and sagging lines with code-compliant rigid metal ducting.</p>
-                    <a href="services.html#repairs" class="mt-auto inline-block bg-red-600 text-white text-center py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-black transition">View Details <span class="block text-[9px] font-medium normal-case tracking-normal opacity-80 uppercase font-black">Prompt Reliable Services</span></a>
+                    <p class="text-sm text-slate-600 leading-relaxed">Replacing crushed transitions and sagging lines with code-compliant rigid metal ducting.</p>
+                    <a href="services.html#repairs" class="mt-auto inline-block bg-red-600 text-white text-center py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-black transition">View Details <span class="block text-[9px] font-medium normal-case tracking-normal opacity-80 uppercase">Prompt Reliable Services</span></a>
                 </div>
             </div>
-
-            <!-- Installation -->
             <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden flex flex-col group text-slate-900">
                 <div class="overflow-hidden h-48"><img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-32.jpg" alt="Installation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
                 <div class="p-6 flex-grow flex flex-col gap-4">
                     <h3 class="text-xl font-black text-blue-900 uppercase italic">New Installs</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed font-black">Full system routing, booster fans, and pest-proof exterior covers built to last.</p>
-                    <a href="services.html#install" class="mt-auto inline-block bg-blue-600 text-white text-center py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-black transition">View Details <span class="block text-[9px] font-medium normal-case tracking-normal opacity-80 font-black">Free Estimates</span></a>
+                    <p class="text-sm text-slate-600 leading-relaxed">Full system routing, booster fans, and pest-proof exterior covers built to last.</p>
+                    <a href="services.html#install" class="mt-auto inline-block bg-blue-600 text-white text-center py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-black transition">View Details <span class="block text-[9px] font-medium normal-case tracking-normal opacity-80">Free Estimates</span></a>
                 </div>
             </div>
-
-            <!-- Inspection -->
             <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden flex flex-col group text-slate-900 font-black">
                 <div class="overflow-hidden h-48"><img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-33.jpg" alt="Inspection" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"></div>
-                <div class="p-6 flex-grow flex flex-col gap-4 font-black">
-                    <h3 class="text-xl font-black text-blue-900 uppercase italic font-black">Inspections</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed font-black">12-point multi-step inspections with video camera internal duct auditing.</p>
-                    <a href="services.html#inspection" class="mt-auto inline-block bg-red-600 text-white text-center py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-black transition">Call Today <span class="block text-[10px] font-medium normal-case tracking-normal opacity-80 uppercase">775-224-4136</span></a>
+                <div class="p-6 flex-grow flex flex-col gap-4">
+                    <h3 class="text-xl font-black text-blue-900 uppercase italic font-black text-slate-900">Inspections</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">12-point multi-step inspections with video camera internal duct auditing.</p>
+                    <a href="services.html#inspection" class="mt-auto inline-block bg-red-600 text-white text-center py-3 rounded-xl font-bold uppercase tracking-wider text-xs hover:bg-black transition font-black">Call Today <span class="block text-[10px] font-medium normal-case tracking-normal opacity-80 uppercase">775-224-4136</span></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FOOTER REDUCTION -->
-    <footer class="bg-blue-900 py-16 px-6 text-center text-white font-black">
+    <footer class="bg-blue-900 py-16 px-6 text-center text-white font-black uppercase">
         <div class="max-w-4xl mx-auto space-y-6">
             <p class="text-xl font-black italic tracking-widest opacity-80 decoration-red-600 underline underline-offset-8 uppercase font-black">ALWAYS AL DENTE — NEVER OVERCOOKED.</p>
-            <div class="h-px bg-white/10 w-24 mx-auto"></div>
-            <p class="text-sm text-blue-300 font-medium uppercase font-black">&copy; 2026 All Star Dryer Vent. Northern Nevada's Fire Safety Leaders.</p>
+            <div class="h-px bg-white/10 w-24 mx-auto font-black"></div>
+            <p class="text-sm text-blue-300 font-medium font-black">&copy; 2026 All Star Dryer Vent. Northern Nevada's Fire Safety Leaders.</p>
         </div>
     </footer>
 </body>
