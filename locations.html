@@ -15,6 +15,10 @@
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(187, 72, 74, 0.05), transparent),
+                        radial-gradient(circle at bottom left, rgba(21, 89, 237, 0.05), transparent);
+        }
         .area-card:hover img {
             transform: scale(1.05);
         }
@@ -60,18 +64,56 @@
         </ul><a href="https://book.housecallpro.com/book/All-Star-Dryer-Vent/1a8d0e15a2844e429147c1c8050bde35?v2=true" class="hidden md:block bg-red-600 text-white px-6 py-2 rounded-full font-black uppercase text-sm tracking-widest shadow-lg hover:bg-black transition ml-4 animate-bounce-medium">Book Now</a>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-20 font-black">
-        <div class="text-center mb-16 space-y-4">
-            <h1 class="text-4xl md:text-6xl font-black text-blue-900 uppercase tracking-tighter font-black font-black">Northern Nevada Service Areas</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto border-t-2 border-red-600 pt-4 font-black">
-                Providing specialized <span class="font-bold text-slate-800">dryer vent cleaning</span> and emergency duct repairs for all 9 Northern Nevada hubs.
-            </p>
+    <!-- HERO SECTION -->
+    <section class="hero-gradient relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-28 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start relative z-10">
+            <div class="space-y-8">
+                <div class="inline-block bg-white/80 backdrop-blur px-4 py-1 rounded-full border border-blue-100 shadow-sm">
+                    <span class="text-blue-600 font-bold text-xs uppercase tracking-widest font-black">🏆 Reliable Service Calls Guaranteed</span>
+                </div>
+                <div class="space-y-2">
+                    <h1 class="text-4xl md:text-6xl font-black text-blue-900 leading-[0.95] tracking-tighter uppercase">
+                        Northern Nevada <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-red-600">Service Areas</span>
+                    </h1>
+                </div>
+                <p class="text-xl text-slate-600 leading-relaxed max-w-xl font-black">
+                    Providing specialized <span class="text-slate-900">dryer vent cleaning</span> and emergency duct repairs for all 9 Northern Nevada hubs. We eliminate fire hazards and slash energy bills servicing Reno, Sparks, and surrounding communities since 2013.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://book.housecallpro.com/book/All-Star-Dryer-Vent/1a8d0e15a2844e429147c1c8050bde35?v2=true" class="bg-blue-600 text-white rounded-2xl px-10 py-5 text-xl font-black uppercase tracking-wider shadow-2xl hover:bg-black transition-all hover:-translate-y-1 text-center font-black">Book Online Now</a>
+                    <a href="tel:7752244136" class="bg-white text-blue-900 border-2 border-blue-900 rounded-2xl px-10 py-5 text-xl font-black uppercase tracking-wider shadow-xl hover:bg-blue-50 transition-all text-center font-black">775-224-4136</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative bg-white p-10 rounded-[2rem] shadow-2xl border border-slate-100">
+                    <div class="mb-8 space-y-2">
+                        <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight italic font-black">Service Call Request</h2>
+                        <p class="text-slate-500 font-medium text-sm font-black">Send All Star Dryer Vent a message here.</p>
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <input type="text" name="name" placeholder="Full Name*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
+                        <input type="tel" name="phone" placeholder="Phone Number*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
+                        <input type="email" name="email" placeholder="Email Address*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
+                        <input type="text" name="postal_code" placeholder="Service Zip Code*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
+                        <button type="submit" class="w-full bg-red-600 hover:bg-black text-white font-black text-xl py-5 rounded-2xl shadow-xl uppercase tracking-[0.2em] transition duration-300 font-black">Submit Request</button>
+                    </form>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 py-20 font-black">
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24 font-black">
             <!-- Reno -->
             <article class="area-card bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 flex flex-col transition duration-300 hover:shadow-2xl">
-                <img src="https://www.allstardryervent.com/wp-content/uploads/2023/03/cropped-ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-logo2-270x270.png" alt="Reno NV dryer vent specialists 775-224-4136" title="Reno Flagship Service Hub" class="w-full h-56 object-contain bg-slate-50 p-8 transition-transform duration-500">
+                <div class="w-full h-56 bg-slate-50 flex items-center justify-center p-4">
+                    <img src="https://www.allstardryervent.com/wp-content/uploads/2023/03/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-logo2.png" alt="Reno NV dryer vent specialists 775-224-4136" title="Reno Flagship Service Hub" class="max-w-full max-h-full object-contain transition-transform duration-500">
+                </div>
                 <div class="p-8 space-y-4 flex-grow">
                     <h2 class="text-2xl font-black text-blue-900 uppercase tracking-tight italic">Reno, NV</h2>
                     <p class="text-gray-600 text-sm leading-relaxed">Our flagship service hub. We deliver the highest rated <strong>dryer vent cleaning Reno</strong> provides instantly 775-224-4136.</p>
