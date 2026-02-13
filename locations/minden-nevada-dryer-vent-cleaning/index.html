@@ -14,6 +14,28 @@
         @keyframes aggressive-bounce { 0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 40% {transform: translateY(-8px);} 60% {transform: translateY(-4px);} }
         .animate-bounce-medium { animation: aggressive-bounce 2.5s infinite; }
         .lint-bg { background-color: #4a5568; background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png"); }
+            @keyframes roll {
+            0% { opacity: 0; transform: translateY(20px); }
+            10% { opacity: 1; transform: translateY(0); }
+            30% { opacity: 1; transform: translateY(0); }
+            40% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+        .rolling-text span {
+            position: absolute;
+            opacity: 0;
+            animation: roll 6s infinite;
+        }
+        .rolling-text span:nth-child(1) { color: #0f172a; }
+        .rolling-text span:nth-child(2) { animation-delay: 2s; color: #2563eb; }
+        .rolling-text span:nth-child(3) { animation-delay: 4s; color: #dc2626; }
+        .before-after-img {
+            transition: all 0.3s ease;
+        }
+        .before-after-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
     </style>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -72,31 +94,79 @@ src="https://www.facebook.com/tr?id=1232286981505146&ev=PageView&noscript=1"
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="hero-gradient relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-28">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
-            <div class="space-y-8 font-black">
+    <section class="hero-gradient relative overflow-hidden pt-8 pb-12 md:pt-16 md:pb-24">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start relative z-10">
+            <div class="space-y-8">
                 <div class="inline-block bg-white/80 backdrop-blur px-4 py-1 rounded-full border border-blue-100 shadow-sm">
-                    <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">🏆 Minden's Best Choice for Safety</span>
+                    <span class="text-blue-600 font-bold text-xs uppercase tracking-widest font-black">🏆 Locally Owned & Operated</span>
                 </div>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter uppercase font-black">
-                    Minden Dryer Vent Cleaning & Repair
-                </h1>
-                <p class="text-xl text-slate-600 leading-relaxed max-w-xl font-medium font-black">
-                    Minden and Gardnerville homeowners choose All Star for professional vent inspections and lint removal. We ensure your Carson Valley home stays safe and energy-efficient.
+                <div class="space-y-2">
+                    <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-[0.95] tracking-tighter uppercase">
+                        Dryer Vent <br>
+                        <div class="rolling-text relative h-[1.1em] overflow-hidden">
+                            <span>Restoration</span>
+                            <span>Cleaning</span>
+                            <span>Repairs</span>
+                        </div>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-red-600 block pt-2">Carson Valley</span>
+                    </h1>
+                </div>
+                <p class="text-xl text-slate-600 leading-relaxed max-w-xl font-medium">
+                    Northern Nevada's elite choice for <span class="font-bold text-slate-900">dryer vent cleaning and restoration.</span> Since 2013, we've specialized in professional lint removal and reviving safety across Minden, Gardnerville, and the entire Carson Valley.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://book.housecallpro.com/book/All-Star-Dryer-Vent/1a8d0e15a2844e429147c1c8050bde35?v2=true" class="bg-blue-600 text-white rounded-2xl px-10 py-5 text-xl font-black uppercase tracking-wider shadow-2xl hover:bg-black transition-all hover:-translate-y-1 text-center font-black">Book Restoration</a>
-                    <a href="tel:7752244136" class="bg-white text-blue-900 border-2 border-blue-900 rounded-2xl px-10 py-5 text-xl font-black uppercase tracking-wider shadow-xl hover:bg-blue-50 transition-all text-center font-black">775-224-4136</a>
+                    <a href="https://book.housecallpro.com/book/All-Star-Dryer-Vent/1a8d0e15a2844e429147c1c8050bde35?v2=true" class="bg-blue-600 text-white rounded-2xl px-10 py-5 text-xl font-black uppercase tracking-wider shadow-2xl hover:bg-black transition-all hover:-translate-y-1 active:scale-95 inline-block text-center">Book Online Now</a>
+                    <a href="tel:7752244136" class="bg-white text-blue-900 border-2 border-blue-900 rounded-2xl px-10 py-5 text-xl font-black uppercase tracking-wider shadow-xl hover:bg-blue-50 transition-all text-center">775-224-4136</a>
                 </div>
             </div>
-            <div class="relative font-black">
-                <img src="https://www.allstardryervent.com/wp-content/uploads/2023/02/ALL-STAR-DRYER-VENT-CLEANING-REPAIR-AND-INSTALL-RENO-NEVADA-775-224-4136-47.jpg" alt="Dryer vent restoration service in Minden NV" class="rounded-3xl shadow-2xl w-full">
-                <div class="absolute -bottom-4 -right-4 bg-red-600 text-white px-6 py-3 rounded-2xl font-black uppercase text-sm shadow-xl font-black">
-                    Serving Minden Since 2013
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative bg-white p-10 rounded-[2rem] shadow-2xl border border-slate-100">
+                    <div class="mb-8 space-y-2">
+                        <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight italic">Service Call Request</h2>
+                        <p class="text-slate-500 font-medium text-sm">Send All Star Dryer Vent a message here.</p>
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="location" value="Minden">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <input type="text" name="name" placeholder="Full Name*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
+                        <input type="tel" name="phone" placeholder="Phone Number*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
+                        <input type="email" name="email" placeholder="Email Address*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
+                        <input type="text" name="postal_code" placeholder="Service Zip Code*" required class="w-full bg-slate-50 border-2 border-slate-100 p-4 rounded-xl focus:border-blue-600 outline-none transition font-semibold">
+                        <button type="submit" class="w-full bg-red-600 hover:bg-black text-white font-black text-xl py-5 rounded-2xl shadow-xl uppercase tracking-[0.2em] transition duration-300">Submit Request</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- IMAGE STRIP -->
+    <section class="lint-bg border-y border-slate-700 py-10">
+        <div class="max-w-[100vw] overflow-hidden">
+            <div class="flex flex-wrap justify-center gap-4 px-4">
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-52 flex-shrink-0">
+                    <img src="../../images/dryer-vent-cover-clean-install-reno.jpg" alt="Professional dryer vent cover installation Minden NV" title="New Dryer Vent Cover Installation Minden" loading="lazy" width="208" height="208" class="before-after-img w-full h-full object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-52 flex-shrink-0">
+                    <img src="../../images/dryer-vent-damaged-before-repair.jpg" alt="Damaged dryer vent before repair Minden NV" title="Dryer Vent Damage Assessment Minden" loading="lazy" width="208" height="208" class="before-after-img w-full h-full object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-52 flex-shrink-0">
+                    <img src="../../images/dryer-duct-inspection-dirty.jpg" alt="Dirty dryer duct inspection Minden NV" title="In-Duct Lint Buildup Inspection Minden" loading="lazy" width="208" height="208" class="before-after-img w-full h-full object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-52 flex-shrink-0">
+                    <img src="../../images/dryer-vent-roof-lint-clog.jpg" alt="Roof dryer vent lint clog removal Minden NV" title="Roof Exit Dryer Vent Lint Accumulation Minden" loading="lazy" width="208" height="208" class="before-after-img w-full h-full object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-52 flex-shrink-0">
+                    <img src="../../images/dryer-vent-exterior-damaged.jpg" alt="Damaged exterior dryer vent cover Minden NV" title="Exterior Dryer Vent Cover Damage Minden" loading="lazy" width="208" height="208" class="before-after-img w-full h-full object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 aspect-square w-24 md:w-52 flex-shrink-0">
+                    <img src="../../images/dryer-duct-after-cleaning-sparks.jpg" alt="Clean dryer duct after professional cleaning Minden NV" title="Dryer Duct Interior After Professional Cleaning Minden" loading="lazy" width="208" height="208" class="before-after-img w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- SERVICES SECTION -->
     <section id="services" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-200">
