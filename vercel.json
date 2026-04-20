@@ -2,7 +2,7 @@
   "rewrites": [
     { "source": "/contact", "destination": "/contact.html" },
     { "source": "/services", "destination": "/services.html" },
-    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/privacy-policy", "destination": "/privacy-policy/index.html" },
     { "source": "/locations", "destination": "/locations.html" },
     { "source": "/faq", "destination": "/faq/index.html" },
     { "source": "/thank-you", "destination": "/thank-you/index.html" }
@@ -11,7 +11,8 @@
     { "source": "/index.html", "destination": "/", "statusCode": 301 },
     { "source": "/contact.html", "destination": "/contact", "statusCode": 301 },
     { "source": "/services.html", "destination": "/services", "statusCode": 301 },
-    { "source": "/privacy.html", "destination": "/privacy", "statusCode": 301 },
+    { "source": "/privacy.html", "destination": "/privacy-policy/", "statusCode": 301 },
+    { "source": "/privacy", "destination": "/privacy-policy/", "statusCode": 301 },
     { "source": "/locations.html", "destination": "/locations", "statusCode": 301 },
     { "source": "/faq/index.html", "destination": "/faq", "statusCode": 301 },
     { "source": "/thank-you/index.html", "destination": "/thank-you", "statusCode": 301 },
