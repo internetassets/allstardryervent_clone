@@ -45,7 +45,7 @@ META_DESCS = {
 AGGREGATE_RATING = {
     '@type': 'AggregateRating',
     'ratingValue': '5.0',
-    'reviewCount': '47',
+    'reviewCount': '166',
     'bestRating': '5',
     'worstRating': '1'
 }
