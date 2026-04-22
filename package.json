@@ -1,0 +1,26 @@
+{
+  "name": "allstardryervent_clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.min.css --minify",
+    "watch:css": "tailwindcss -i ./css/input.css -o ./css/tailwind.min.css --minify --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/internetassets/allstardryervent_clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/internetassets/allstardryervent_clone/issues"
+  },
+  "homepage": "https://github.com/internetassets/allstardryervent_clone#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4",
+    "tailwindcss": "^4.2.4"
+  }
+}
