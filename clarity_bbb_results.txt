@@ -1,0 +1,20 @@
+404.html: clarity
+contact.html: clarity, bbb
+faq/index.html: clarity, bbb
+footer_fragment.html: bbb
+index.html: clarity, bbb
+locations.html: clarity, bbb
+locations/cold-springs-nevada-dryer-vent-cleaning/index.html: clarity, bbb
+locations/hidden-valley-nevada-dryer-vent-cleaning/index.html: clarity, bbb
+locations/incline-village-nevada-dryer-vent-cleaning/index.html: clarity, bbb
+locations/lockwood-nv-dryer-vent-cleaning/index.html: clarity, bbb
+locations/minden-nevada-dryer-vent-cleaning/index.html: clarity, bbb
+locations/reno-nv-dryer-vent-services/index.html: clarity, bbb
+locations/sparks-nevada-dryer-vent-cleaning/index.html: clarity, bbb
+locations/sun-valley-nv-dryer-vent-cleaning/index.html: clarity, bbb
+locations/washoe-valley-nv-dryer-vent-cleaning/index.html: clarity, bbb
+privacy-policy/index.html: clarity, bbb
+privacy.html: clarity, bbb
+services.html: clarity, bbb
+thank-you/index.html: clarity
+Total files modified: 19
